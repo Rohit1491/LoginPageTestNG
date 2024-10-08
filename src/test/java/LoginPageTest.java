@@ -13,7 +13,7 @@ import java.time.Duration;
 public class LoginPageTest {
     @Test
     public void loginWithValidCredentials() {
-        // Set the system property for Chrome driver with its path
+        // Setup ChromeDriver using WebDriverManager
         WebDriverManager.chromedriver().setup();
 
         // Create a new instance of ChromeDriver
