@@ -13,7 +13,7 @@ import java.time.Duration;
 public class LoginPageTest {
     @Test
     public void loginWithValidCredentials() {
-        // Setup ChromeDriver using WebDriverManager
+        // Set the system property for Chrome driver with its path
         WebDriverManager.chromedriver().setup();
 
         // Create a new instance of ChromeDriver
@@ -48,6 +48,14 @@ public class LoginPageTest {
 
         // Verify if the expected URL matches the current URL
         Assert.assertEquals(expectedUrl, currentUrl, "URLs do not match");
+
+        // Declare the expected and current headings for the homepage
+        String expectedHomeHeading = "Clothes That Get YOU";
+        WebElement actualHomeHeadingEl = driver.findElement(By.className("home-heading"));
+        String actualHomeHeading = actualHomeHeadingEl.getText();
+
+        // Verify if the expected heading matches the actual heading
+        Assert.assertEquals(expectedHomeHeading, actualHomeHeading, "Homepage heading does not match");
 
         // Close the driver instance
         driver.close();
