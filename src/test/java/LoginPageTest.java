@@ -50,7 +50,7 @@ public class LoginPageTest {
         Assert.assertEquals(expectedUrl, currentUrl, "URLs do not match");
 
         // Declare the expected and current headings for the homepage
-        String expectedHomeHeading = "Clothes That Get YOU";
+        String expectedHomeHeading = "Clothes That Get YOU Noticed";
         WebElement actualHomeHeadingEl = driver.findElement(By.className("home-heading"));
         String actualHomeHeading = actualHomeHeadingEl.getText();
 
