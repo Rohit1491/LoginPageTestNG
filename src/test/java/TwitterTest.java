@@ -20,7 +20,7 @@ public class TwitterTest {
         driver.get("https://twitter.com");
 
         // Define the expected title of the Twitter website's login page
-        String expectedTitle = "Log in to Twitter / Twitter";
+        String expectedTitle = "X. It’s what’s happening / X";
 
         // Get the current title of the web page opened by the driver
         String actualTitle = driver.getTitle();
